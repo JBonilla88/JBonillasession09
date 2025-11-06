@@ -1,0 +1,153 @@
+/* START border-box fix */
+html {
+  box-sizing: border-box;
+}
+
+/* asterisk (*) symbol represents the universal selector. Its primary function is to select all elements of any type within the document. */
+/* :before is a pseudo-element used to insert content before the actual content of a selected element. It creates a "virtual" first child within the element, allowing you to style and add content that isn't directly present in your HTML markup. */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* END border-box fix */
+
+body {
+  background-color: rgb(200, 200, 200);
+  background-image: url("images/background.jpg");
+  background-attachment: fixed;
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#wrapper {
+  margin: 0px auto;
+  /* centers the wrapper */
+  background-color: rgb(255, 255, 255);
+  max-width: 1000px;
+  border: solid 10px rgb(0, 0, 0);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#wrapper>* {
+  padding: 20px;
+}
+
+header {
+  background: rgb(31, 26, 100);
+  order: 1;
+  flex: 1 0 100%;
+}
+
+main {
+  background: rgb(31, 189, 81);
+  order: 3;
+  flex: 1 1 500px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  
+}
+
+nav {
+  background: rgb(221, 111, 255);
+  order: 2;
+  flex: 1 0 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+aside {
+  background: rgb(138, 28, 28);
+  order: 4;
+  flex: 1 0 200px;
+}
+
+footer {
+  background: rgb(234, 247, 135);
+  order: 5;
+  flex: 1 0 100%;
+}
+
+h1 {
+  text-align: center;
+  text-decoration: underline;
+  font-family: "Kablammo", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "MORF" 0;
+    color: #ff0db6;
+}
+
+h2 {
+  text-align: center;
+  font-family: "Kablammo", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "MORF" 0;
+    color: #ff0db6;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+h3 {
+  font-size: x-large;
+  text-decoration: underline;
+}
+
+article {
+  color: rgb(230, 255, 44);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+li a {
+  display: block;
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  text-decoration: none;
+  background-color: rgb(175, 19, 254);
+  border-radius: 8px;
+}
+
+li a:hover {
+  background-color: rgb(79, 35, 255);
+  color: rgb(56, 48, 37);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
